@@ -41,7 +41,7 @@ spec:
     }
 
   environment {
-    registryCredential='DockerId'
+    registryCredential='chikitor'
     registryFrontend = 'chikitor/frontend-demo'
   }
 
