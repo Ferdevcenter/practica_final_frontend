@@ -32,8 +32,14 @@ spec:
     registryCredential='chikitor'
     registryFrontend = 'chikitor/frontend-demo'
   }
-
+  
   stages {
+    stage('version'){
+      steps {
+        sh 'node --version'
+      }
+    }
+
     stage('Build') {
       steps {
         sh 'npm install' 
