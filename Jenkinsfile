@@ -48,17 +48,6 @@ spec:
       }
     }
 
-    stage('Push Image to Docker Hub') {
-      steps {
-        script {
-          dockerImage = docker.build registryFrontend + ":$BUILD_NUMBER"
-          docker.withRegistry( '', registryCredential) {
-            dockerImage.push()
-          }
-        }
-      }
-    }
-
     stage('Push Image latest to Docker Hub') {
       steps {
         script {
